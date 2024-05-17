@@ -1,13 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
-  <script src="index.js" defer></script>
-  <title>Forge_</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/modern-normalize.css" />
+
+    <title>Forge_</title>
+  </head>
+  <body>
+    <main>
+      <section class="selected-task">
+        <input
+          type="text"
+          placeholder="Add a task. . ."
+          maxlength="35"
+          id="headingInput"
+        />
+
+        <hr />
+
+        <ul>
+          <li>
+            <input
+              type="checkbox"
+              name="task-1"
+              id="task-1-input"
+              class="checkbox"
+            />
+            <div class="bodymovinanim"></div>
+            <label class="tasks" for="task-1" id="task-1-label">
+              Decide on a destination and duration for the trip.
+            </label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              name="task-2"
+              id="task-2-input"
+              class="checkbox"
+            />
+            <div class="bodymovinanim"></div>
+            <label class="tasks" for="task-2" id="task-2-label">
+              Research transportation options, such as flights or train tickets.
+            </label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              name="task-3"
+              id="task-3-input"
+              class="checkbox"
+            />
+            <div class="bodymovinanim"></div>
+            <label class="tasks" for="task-3" id="task-3-label">
+              Look for accommodation options, such as hotels or rental
+              properties.
+            </label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              name="task-4"
+              id="task-4-input"
+              class="checkbox"
+            />
+            <div class="bodymovinanim"></div>
+            <label class="tasks" for="task-4" id="task-4-label">
+              Plan activities and attractions to visit during the trip.
+            </label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              name="task-5"
+              id="task-5-input"
+              class="checkbox"
+            />
+            <div class="bodymovinanim"></div>
+            <label class="tasks" for="task-5" id="task-5-label">
+              Create a budget for the trip, including expenses for travel,
+              accommodation, food, and activities.
+            </label>
+          </li>
+        </ul>
+
+        <div class="task-input" id="myInput">
+          <div class="add-button">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <input type="text" placeholder="Add new task..." maxlength="100" />
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

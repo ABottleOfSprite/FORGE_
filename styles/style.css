@@ -1,11 +1,141 @@
 :root {
-  --color-primary: #f08c00; 
+  --color-primary: #f08c00;
   --color-secondary: #874000;
+  --color-checked: #32e21b;
   --color-success: #28a745;
-  --color-info: #AFC97E;
+  --color-info: #afc97e;
   --color-danger: #dc3545;
   --color-light: #fff;
   --color-dark: #1e1e1e;
   --color-white: #fff;
   --color-black: #000;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.selected-task {
+  padding-inline: 5rem;
+
+  #headingInput {
+    font-size: 2.75rem;
+    font-weight: 900;
+    margin-block: 2rem 1rem;
+    margin-inline: 3rem;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: text;
+    &::placeholder {
+      font-size: 2.75rem;
+      font-weight: 300;
+      margin-block: 2rem 1rem;
+      margin-inline: 3rem;
+      color: grey;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-inline: 3rem 6rem;
+    font-weight: 600;
+    line-height: 3;
+
+    input {
+      display: none;
+    }
+
+    li {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .task-input {
+    margin-inline: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 1rem;
+
+    input {
+      background-color: transparent;
+      border: none;
+      color: inherit;
+      width: 100%;
+
+      /* Remove focus border */
+      &:focus {
+        outline: none;
+      }
+
+      &:placeholder {
+        font-family: inherit;
+      }
+    }
+  }
+}
+
+.bodymovinanim {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  filter: invert(1);
+  margin-inline-end: 1rem;
+  transition: all 0.5s ease-in-out;
+  user-select: none;
+}
+
+.tasks {
+  width: 100%;
+}
+
+.checkedTask {
+  background-image: linear-gradient(
+    to right,
+    var(--color-checked),
+    var(--color-checked)
+  );
+  background-repeat: no-repeat;
+  background-clip: text;
+  color: transparent;
+  animation: lengthAnimation 1s ease-in forwards;
+}
+
+@keyframes lengthAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.successTask {
+  background-image: linear-gradient(
+    to right,
+    var(--color-success),
+    var(--color-success)
+  );
+  background-repeat: no-repeat;
+  background-clip: text;
+  color: transparent;
+}
+
+#headingInput:focus {
+  outline: none;
 }
